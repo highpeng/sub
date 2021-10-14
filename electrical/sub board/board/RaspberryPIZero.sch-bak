@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 10 12
+Sheet 10 14
 Title ""
 Date ""
 Rev ""
@@ -14,21 +14,21 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector:Raspberry_Pi_2_3 J?
-U 1 1 616A9CC0
+L Connector:Raspberry_Pi_2_3 J1001
+U 1 1 6185FDAC
 P 5300 3700
-F 0 "J?" H 4250 5200 50  0000 C CNN
-F 1 "Raspberry_Pi_Zero" H 4550 5100 50  0000 C CNN
-F 2 "" H 5300 3700 50  0001 C CNN
+F 0 "J1001" H 4250 5200 50  0000 C CNN
+F 1 "Raspberry_Pi" H 4550 5100 50  0000 C CNN
+F 2 "Module:Raspberry_Pi_Zero_Socketed_THT_MountingHoles_SMT" H 5300 3700 50  0001 C CNN
 F 3 "https://www.raspberrypi.org/documentation/hardware/raspberrypi/schematics/rpi_SCH_3bplus_1p0_reduced.pdf" H 5300 3700 50  0001 C CNN
 	1    5300 3700
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
-U 1 1 616ADC4E
+L power:GND #PWR01002
+U 1 1 6185FDAD
 P 5200 5000
-F 0 "#PWR?" H 5200 4750 50  0001 C CNN
+F 0 "#PWR01002" H 5200 4750 50  0001 C CNN
 F 1 "GND" H 5205 4827 50  0000 C CNN
 F 2 "" H 5200 5000 50  0001 C CNN
 F 3 "" H 5200 5000 50  0001 C CNN
@@ -36,10 +36,10 @@ F 3 "" H 5200 5000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR?
-U 1 1 616ADEB3
+L power:+5V #PWR01001
+U 1 1 6185FDAE
 P 5100 2400
-F 0 "#PWR?" H 5100 2250 50  0001 C CNN
+F 0 "#PWR01001" H 5100 2250 50  0001 C CNN
 F 1 "+5V" H 5115 2573 50  0000 C CNN
 F 2 "" H 5100 2400 50  0001 C CNN
 F 3 "" H 5100 2400 50  0001 C CNN
@@ -69,22 +69,6 @@ Wire Wire Line
 Connection ~ 5500 5000
 Wire Wire Line
 	5500 5000 5600 5000
-Wire Wire Line
-	6100 3900 6500 3900
-Wire Wire Line
-	6500 4000 6100 4000
-Wire Wire Line
-	6500 4100 6100 4100
-Wire Wire Line
-	6500 4200 6100 4200
-Text HLabel 6500 3900 2    50   Output ~ 0
-nCE0
-Text HLabel 6500 4000 2    50   Input ~ 0
-miso
-Text HLabel 6500 4100 2    50   Output ~ 0
-mosi
-Text HLabel 6500 4200 2    50   Output ~ 0
-sclk
 NoConn ~ 4500 3100
 NoConn ~ 4500 3200
 NoConn ~ 4500 3300

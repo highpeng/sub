@@ -439,21 +439,6 @@ F 3 "~" H 1100 1250 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:Polyfuse_Small F?
-U 1 1 61629DCB
-P 1700 1150
-F 0 "F?" V 1495 1150 50  0000 C CNN
-F 1 "Polyfuse_Small" V 1586 1150 50  0000 C CNN
-F 2 "" H 1750 950 50  0001 L CNN
-F 3 "~" H 1700 1150 50  0001 C CNN
-	1    1700 1150
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1300 1150 1600 1150
-Wire Wire Line
-	1800 1150 1950 1150
-$Comp
 L power:GND #PWR?
 U 1 1 6162DDE2
 P 1300 1250
@@ -601,4 +586,6 @@ Wire Wire Line
 	2150 1150 2450 1150
 Wire Wire Line
 	2450 1150 2450 1050
+Wire Wire Line
+	1300 1150 1950 1150
 $EndSCHEMATC

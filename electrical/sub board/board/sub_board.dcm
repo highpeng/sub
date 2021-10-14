@@ -1,5 +1,95 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP G2RL-2-ASI-DC12
+D General Purpose Relay DPDT (2 Form C) Through Hole, Omron G2RL series, AgSnIn (large inrush current) contacts, 12V coil
+K Omron Relay Dual Pole
+F https://omronfs.omron.com/en_US/ecb/products/pdf/en-g2rl.pdf
+$ENDCMP
+#
+$CMP G2RL-2-ASI-DC24
+D General Purpose Relay DPDT (2 Form C) Through Hole, Omron G2RL series, AgSnIn (large inrush current) contacts, 24V coil
+K Omron Relay Dual Pole
+F https://omronfs.omron.com/en_US/ecb/products/pdf/en-g2rl.pdf
+$ENDCMP
+#
+$CMP G2RL-2-ASI-DC48
+D General Purpose Relay DPDT (2 Form C) Through Hole, Omron G2RL series, AgSnIn (large inrush current) contacts, 48V coil
+K Omron Relay Dual Pole
+F https://omronfs.omron.com/en_US/ecb/products/pdf/en-g2rl.pdf
+$ENDCMP
+#
+$CMP G2RL-2-ASI-DC5
+D General Purpose Relay DPDT (2 Form C) Through Hole, Omron G2RL series, AgSnIn (large inrush current) contacts, 5V coil
+K Omron Relay Dual Pole
+F https://omronfs.omron.com/en_US/ecb/products/pdf/en-g2rl.pdf
+$ENDCMP
+#
+$CMP G2RL-2-DC12
+D General Purpose Relay DPDT (2 Form C) Through Hole, Omron G2RL series, 12V coil
+K Omron Relay Dual Pole
+F https://omronfs.omron.com/en_US/ecb/products/pdf/en-g2rl.pdf
+$ENDCMP
+#
+$CMP G2RL-2-DC24
+D General Purpose Relay DPDT (2 Form C) Through Hole, Omron G2RL series, 24V coil
+K Omron Relay Dual Pole
+F https://omronfs.omron.com/en_US/ecb/products/pdf/en-g2rl.pdf
+$ENDCMP
+#
+$CMP G2RL-2-DC48
+D General Purpose Relay DPDT (2 Form C) Through Hole, Omron G2RL series, 48V coil
+K Omron Relay Dual Pole
+F https://omronfs.omron.com/en_US/ecb/products/pdf/en-g2rl.pdf
+$ENDCMP
+#
+$CMP G2RL-2-DC5
+D General Purpose Relay DPDT (2 Form C) Through Hole, Omron G2RL series, 5V coil
+K Omron Relay Dual Pole
+F https://omronfs.omron.com/en_US/ecb/products/pdf/en-g2rl.pdf
+$ENDCMP
+#
+$CMP G2RL-2-HA-DC12
+D General Purpose Relay DPDT (2 Form C) Through Hole, Omron G2RL series, IEC/EN60335-1, 12V coil
+K Omron Relay Dual Pole
+F https://omronfs.omron.com/en_US/ecb/products/pdf/en-g2rl.pdf
+$ENDCMP
+#
+$CMP G2RL-2-HA-DC24
+D General Purpose Relay DPDT (2 Form C) Through Hole, Omron G2RL series, IEC/EN60335-1, 24V coil
+K Omron Relay Dual Pole
+F https://omronfs.omron.com/en_US/ecb/products/pdf/en-g2rl.pdf
+$ENDCMP
+#
+$CMP G2RL-2-HA-DC5
+D General Purpose Relay DPDT (2 Form C) Through Hole, Omron G2RL series, IEC/EN60335-1, 5V coil
+K Omron Relay Dual Pole
+F https://omronfs.omron.com/en_US/ecb/products/pdf/en-g2rl.pdf
+$ENDCMP
+#
+$CMP G2RL-24-DC12
+D General Purpose Relay DPDT (2 Form C) Through Hole, Omron G2RL series, sealed, 12V coil
+K Omron Relay Dual Pole
+F https://omronfs.omron.com/en_US/ecb/products/pdf/en-g2rl.pdf
+$ENDCMP
+#
+$CMP G2RL-24-DC24
+D General Purpose Relay DPDT (2 Form C) Through Hole, Omron G2RL series, sealed, 24V coil
+K Omron Relay Dual Pole
+F https://omronfs.omron.com/en_US/ecb/products/pdf/en-g2rl.pdf
+$ENDCMP
+#
+$CMP G2RL-24-DC48
+D General Purpose Relay DPDT (2 Form C) Through Hole, Omron G2RL series, sealed, 48V coil
+K Omron Relay Dual Pole
+F https://omronfs.omron.com/en_US/ecb/products/pdf/en-g2rl.pdf
+$ENDCMP
+#
+$CMP G2RL-24-DC5
+D General Purpose Relay DPDT (2 Form C) Through Hole, Omron G2RL series, sealed, 5V coil
+K Omron Relay Dual Pole
+F https://omronfs.omron.com/en_US/ecb/products/pdf/en-g2rl.pdf
+$ENDCMP
+#
 $CMP Micro_SD_Card_Det
 D Micro SD Card Socket with card detection pins
 K connector SD microsd

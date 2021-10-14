@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 12
+Sheet 1 14
 Title ""
 Date ""
 Rev ""
@@ -18,16 +18,15 @@ S 7950 850  1250 1300
 U 615FBE83
 F0 "ethernet" 50
 F1 "ethernet.sch" 50
-F2 "25MHz" I L 7950 950 50 
-F3 "tx_en" I L 7950 1050 50 
-F4 "tx_d[1..0]" I L 7950 1150 50 
-F5 "rx_d[1..0]" O L 7950 1250 50 
-F6 "crs_dv" O L 7950 1350 50 
-F7 "50MHz" O L 7950 1450 50 
-F8 "mdio" B L 7950 1550 50 
-F9 "mdc" I L 7950 1650 50 
-F10 "pwdn_int" B L 7950 1750 50 
-F11 "rst_n" I L 7950 1850 50 
+F2 "tx_en" I L 7950 1050 50 
+F3 "tx_d[1..0]" I L 7950 1150 50 
+F4 "rx_d[1..0]" O L 7950 1250 50 
+F5 "crs_dv" O L 7950 1350 50 
+F6 "50MHz" O L 7950 1450 50 
+F7 "mdio" B L 7950 1550 50 
+F8 "mdc" I L 7950 1650 50 
+F9 "pwdn_int" B L 7950 1750 50 
+F10 "rst_n" I L 7950 1850 50 
 $EndSheet
 $Sheet
 S 1500 6050 750  700 
@@ -63,12 +62,12 @@ Wire Wire Line
 Wire Wire Line
 	2300 3200 2300 3350
 $Comp
-L Device:R_Small_US R?
+L Device:R_Small_US R105
 U 1 1 6168C612
 P 2300 3450
-F 0 "R?" H 2368 3496 50  0000 L CNN
+F 0 "R105" H 2368 3496 50  0000 L CNN
 F 1 "0R" H 2368 3405 50  0000 L CNN
-F 2 "" H 2300 3450 50  0001 C CNN
+F 2 "sub:AMASS_XT30U-F_1x02_P5.0mm_Vertical" H 2300 3450 50  0001 C CNN
 F 3 "~" H 2300 3450 50  0001 C CNN
 	1    2300 3450
 	1    0    0    -1  
@@ -94,16 +93,12 @@ F4 "sda" B R 2250 5350 50
 F5 "scl" I R 2250 5450 50 
 $EndSheet
 $Sheet
-S 8500 2400 1000 750 
+S 8500 2350 900  350 
 U 616CF304
 F0 "RaspberryPiCM3+" 50
 F1 "RaspberryPiCM3+.sch" 50
-F2 "spi_ncs" O L 8500 2500 50 
-F3 "spi_miso" I L 8500 2600 50 
-F4 "spi_mosi" O L 8500 2700 50 
-F5 "spi_sclk" O L 8500 2800 50 
-F6 "txd" O L 8500 3050 50 
-F7 "rxd" I L 8500 2950 50 
+F2 "txd" O L 8500 2600 50 
+F3 "rxd" I L 8500 2500 50 
 $EndSheet
 Text Label 3600 1650 2    50   ~ 0
 lights
@@ -145,8 +140,6 @@ sda1
 Text Label 2800 5450 2    50   ~ 0
 scl1
 Wire Wire Line
-	7950 950  7350 950 
-Wire Wire Line
 	7950 1050 7350 1050
 Wire Wire Line
 	7950 1150 7350 1150
@@ -165,37 +158,31 @@ Wire Wire Line
 Wire Wire Line
 	7950 1850 7350 1850
 $Sheet
-S 8500 3650 1000 800 
+S 8500 3000 1000 350 
 U 616A9A00
 F0 "RaspberryPIZero" 50
 F1 "RaspberryPIZero.sch" 50
-F2 "nCE0" O L 8500 3800 50 
-F3 "miso" I L 8500 3900 50 
-F4 "mosi" O L 8500 4000 50 
-F5 "sclk" O L 8500 4100 50 
-F6 "txd" O L 8500 4350 50 
-F7 "rxd" I L 8500 4250 50 
+F2 "txd" O L 8500 3250 50 
+F3 "rxd" I L 8500 3150 50 
 $EndSheet
 Wire Wire Line
-	8500 4250 7850 4250
+	8500 3150 7850 3150
 Wire Wire Line
-	7850 4250 7850 2950
+	7850 3150 7850 2500
 Wire Wire Line
-	8500 4350 7750 4350
+	8500 3250 7750 3250
 Wire Wire Line
-	7750 4350 7750 3050
+	7750 3250 7750 2600
 Wire Wire Line
-	8500 3050 8500 2950
+	8500 2500 7850 2500
+Connection ~ 7850 2500
 Wire Wire Line
-	8500 2950 7850 2950
-Connection ~ 7850 2950
+	7850 2500 7350 2500
 Wire Wire Line
-	7850 2950 7350 2950
+	8500 2600 7750 2600
+Connection ~ 7750 2600
 Wire Wire Line
-	8500 3050 7750 3050
-Connection ~ 7750 3050
-Wire Wire Line
-	7750 3050 7350 3050
+	7750 2600 7350 2600
 Wire Wire Line
 	2100 2800 3600 2800
 Wire Wire Line
@@ -211,173 +198,95 @@ Wire Wire Line
 Wire Wire Line
 	2250 5250 3600 5250
 $Comp
-L Device:R_Small_US R?
+L Device:R_Small_US R101
 U 1 1 61DD92A2
-P 1000 1500
-F 0 "R?" V 795 1500 50  0000 C CNN
-F 1 "4.7K" V 886 1500 50  0000 C CNN
-F 2 "" H 1000 1500 50  0001 C CNN
-F 3 "~" H 1000 1500 50  0001 C CNN
-	1    1000 1500
+P 1000 1150
+F 0 "R101" V 795 1150 50  0000 C CNN
+F 1 "4.7K" V 886 1150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 1000 1150 50  0001 C CNN
+F 3 "A121542CT-ND" H 1000 1150 50  0001 C CNN
+	1    1000 1150
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small_US R?
+L Device:R_Small_US R102
 U 1 1 61DD9FA1
-P 1000 1800
-F 0 "R?" V 795 1800 50  0000 C CNN
-F 1 "4.7K" V 886 1800 50  0000 C CNN
-F 2 "" H 1000 1800 50  0001 C CNN
-F 3 "~" H 1000 1800 50  0001 C CNN
-	1    1000 1800
+P 1000 1450
+F 0 "R102" V 795 1450 50  0000 C CNN
+F 1 "4.7K" V 886 1450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 1000 1450 50  0001 C CNN
+F 3 "A121542CT-ND" H 1000 1450 50  0001 C CNN
+	1    1000 1450
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small_US R?
+L Device:R_Small_US R103
 U 1 1 61DDA2C8
-P 1000 2100
-F 0 "R?" V 795 2100 50  0000 C CNN
-F 1 "4.7K" V 886 2100 50  0000 C CNN
-F 2 "" H 1000 2100 50  0001 C CNN
-F 3 "~" H 1000 2100 50  0001 C CNN
-	1    1000 2100
+P 1000 1750
+F 0 "R103" V 795 1750 50  0000 C CNN
+F 1 "4.7K" V 886 1750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 1000 1750 50  0001 C CNN
+F 3 "A121542CT-ND" H 1000 1750 50  0001 C CNN
+	1    1000 1750
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R_Small_US R?
+L Device:R_Small_US R104
 U 1 1 61DDA832
-P 1000 2400
-F 0 "R?" V 795 2400 50  0000 C CNN
-F 1 "4.7K" V 886 2400 50  0000 C CNN
-F 2 "" H 1000 2400 50  0001 C CNN
-F 3 "~" H 1000 2400 50  0001 C CNN
-	1    1000 2400
+P 1000 2050
+F 0 "R104" V 795 2050 50  0000 C CNN
+F 1 "4.7K" V 886 2050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 1000 2050 50  0001 C CNN
+F 3 "A121542CT-ND" H 1000 2050 50  0001 C CNN
+	1    1000 2050
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	1100 1500 1500 1500
+	1100 1150 1500 1150
 Wire Wire Line
-	1100 1800 1500 1800
+	1100 1450 1500 1450
 Wire Wire Line
-	1100 2100 1500 2100
+	1100 1750 1500 1750
 Wire Wire Line
-	1100 2400 1500 2400
+	1100 2050 1500 2050
 Wire Wire Line
-	900  2400 800  2400
+	900  2050 800  2050
 Wire Wire Line
-	800  2400 800  2100
+	800  2050 800  1750
 Wire Wire Line
-	900  1500 800  1500
-Connection ~ 800  1500
+	900  1150 800  1150
+Connection ~ 800  1150
 Wire Wire Line
-	800  1500 800  1350
+	800  1150 800  1000
 Wire Wire Line
-	900  1800 800  1800
-Connection ~ 800  1800
+	900  1450 800  1450
+Connection ~ 800  1450
 Wire Wire Line
-	800  1800 800  1500
+	800  1450 800  1150
 Wire Wire Line
-	900  2100 800  2100
-Connection ~ 800  2100
+	900  1750 800  1750
+Connection ~ 800  1750
 Wire Wire Line
-	800  2100 800  1800
+	800  1750 800  1450
 $Comp
-L power:+3.3V #PWR?
+L power:+3.3V #PWR0101
 U 1 1 61DE6671
-P 800 1350
-F 0 "#PWR?" H 800 1200 50  0001 C CNN
-F 1 "+3.3V" H 815 1523 50  0000 C CNN
-F 2 "" H 800 1350 50  0001 C CNN
-F 3 "" H 800 1350 50  0001 C CNN
-	1    800  1350
+P 800 1000
+F 0 "#PWR0101" H 800 850 50  0001 C CNN
+F 1 "+3.3V" H 815 1173 50  0000 C CNN
+F 2 "" H 800 1000 50  0001 C CNN
+F 3 "" H 800 1000 50  0001 C CNN
+	1    800  1000
 	1    0    0    -1  
 $EndComp
-Text Label 1500 1500 2    50   ~ 0
+Text Label 1500 1150 2    50   ~ 0
 scl0
-Text Label 1500 1800 2    50   ~ 0
+Text Label 1500 1450 2    50   ~ 0
 sda0
-Text Label 1500 2100 2    50   ~ 0
+Text Label 1500 1750 2    50   ~ 0
 scl1
-Text Label 1500 2400 2    50   ~ 0
+Text Label 1500 2050 2    50   ~ 0
 sda1
-$Sheet
-S 3600 700  3750 6350
-U 6147DBE4
-F0 "micro" 50
-F1 "micro.sch" 50
-F2 "lights" O L 3600 1650 50 
-F3 "servo[3..0]" O L 3600 1800 50 
-F4 "bldc[7..0]" O L 3600 1950 50 
-F5 "scl0" O L 3600 2800 50 
-F6 "sda0" B L 3600 2900 50 
-F7 "alcc0" I L 3600 3000 50 
-F8 "scl1" O L 3600 3900 50 
-F9 "sda1" B L 3600 4000 50 
-F10 "alcc1" I L 3600 4100 50 
-F11 "water" I L 3600 5250 50 
-F12 "spi_ncs" O R 7350 5450 50 
-F13 "spi_miso" I R 7350 5550 50 
-F14 "spi_mosi" O R 7350 5650 50 
-F15 "spi_sclk" O R 7350 5750 50 
-F16 "rxd" I R 7350 3050 50 
-F17 "txd" O R 7350 2950 50 
-F18 "temp[3..0]" I L 3600 5100 50 
-F19 "ro" I L 3600 6300 50 
-F20 "de" O L 3600 6450 50 
-F21 "di" O L 3600 6600 50 
-F22 "nRst" O R 7350 1850 50 
-F23 "eth_tx_en" O R 7350 1050 50 
-F24 "eth_tx_d[1..0]" O R 7350 1150 50 
-F25 "eth_rx_d[1..0]" I R 7350 1250 50 
-F26 "eth_crs_dv" I R 7350 1350 50 
-F27 "eth_ref_clk" I R 7350 1450 50 
-F28 "eth_mdio" B R 7350 1550 50 
-F29 "eth_mdc" O R 7350 1650 50 
-F30 "eth_pwdn_int" B R 7350 1750 50 
-F31 "25MHz" O R 7350 950 50 
-F32 "scl3" I R 7350 5200 50 
-F33 "sda3" B R 7350 5100 50 
-F34 "sonar_ana_in" I R 7350 6150 50 
-F35 "sonar_clk" O R 7350 5950 50 
-F36 "sonar_out3" I R 7350 6250 50 
-F37 "sonar_out4" I R 7350 6350 50 
-F38 "sonar_io1" O R 7350 6050 50 
-F39 "sonar_sel" O R 7350 6450 50 
-F40 "sonar_pwr" O R 7350 6550 50 
-$EndSheet
-$Sheet
-S 8500 4700 1000 2150
-U 61ED0387
-F0 "water_sensors" 50
-F1 "water_sensors.sch" 50
-F2 "i2c_slave_sda" B L 8500 4800 50 
-F3 "i2c_slave_scl" I L 8500 4900 50 
-F4 "i2c_master_sda" B L 8500 5100 50 
-F5 "i2c_master_scl" O L 8500 5200 50 
-F6 "sonar_clk" I L 8500 5950 50 
-F7 "sonar_io1" I L 8500 6050 50 
-F8 "sonar_out3" O L 8500 6250 50 
-F9 "sonar_out4" O L 8500 6350 50 
-F10 "sonar_ncs" I L 8500 5450 50 
-F11 "sonar_sdo" O L 8500 5550 50 
-F12 "sonar_sdi" I L 8500 5650 50 
-F13 "sonar_sclk" I L 8500 5750 50 
-F14 "sonar_vout" O L 8500 6150 50 
-F15 "sonar_sel" I L 8500 6450 50 
-F16 "sonar_pwr" I L 8500 6550 50 
-$EndSheet
-Wire Wire Line
-	8500 5100 7350 5100
-Wire Wire Line
-	7350 5200 8500 5200
-Wire Wire Line
-	8500 4800 8000 4800
-Wire Wire Line
-	8000 4900 8500 4900
-Text Label 8000 4800 0    50   ~ 0
-sda1
-Text Label 8000 4900 0    50   ~ 0
-scl1
 Wire Wire Line
 	2250 6300 3600 6300
 Wire Wire Line
@@ -407,22 +316,22 @@ Wire Wire Line
 Wire Wire Line
 	7350 6550 8500 6550
 $Comp
-L Device:Polyfuse_Small F?
+L Device:Polyfuse_Small F101
 U 1 1 623B394B
 P 2400 3200
-F 0 "F?" V 2195 3200 50  0000 C CNN
-F 1 "Polyfuse_Small" V 2286 3200 50  0000 C CNN
-F 2 "" H 2450 3000 50  0001 L CNN
-F 3 "~" H 2400 3200 50  0001 C CNN
+F 0 "F101" V 2195 3200 50  0000 C CNN
+F 1 "6A" V 2286 3200 50  0000 C CNN
+F 2 "sub:2920L" H 2450 3000 50  0001 L CNN
+F 3 "18-2920L600/16MRCT-ND" H 2400 3200 50  0001 C CNN
 	1    2400 3200
 	0    1    1    0   
 $EndComp
 Connection ~ 2300 3200
 $Comp
-L power:+BATT #PWR?
+L power:+BATT #PWR0102
 U 1 1 623B4088
 P 2600 3200
-F 0 "#PWR?" H 2600 3050 50  0001 C CNN
+F 0 "#PWR0102" H 2600 3050 50  0001 C CNN
 F 1 "+BATT" V 2615 3328 50  0000 L CNN
 F 2 "" H 2600 3200 50  0001 C CNN
 F 3 "" H 2600 3200 50  0001 C CNN
@@ -431,4 +340,123 @@ F 3 "" H 2600 3200 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2500 3200 2600 3200
+Text Notes 900  700  0    50   ~ 0
+Power switch\n
+$Sheet
+S 8500 3650 1000 350 
+U 61F97961
+F0 "RaspberryPiCM4" 50
+F1 "RaspberryPiCM4.sch" 50
+F2 "txd" O L 8500 3900 50 
+F3 "rxd" I L 8500 3800 50 
+$EndSheet
+Wire Wire Line
+	8500 3800 7850 3800
+Wire Wire Line
+	7850 3800 7850 3150
+Connection ~ 7850 3150
+Wire Wire Line
+	8500 3900 7750 3900
+Wire Wire Line
+	7750 3900 7750 3250
+Connection ~ 7750 3250
+$Sheet
+S 8500 4700 1000 2150
+U 61ED0387
+F0 "water_sensors" 50
+F1 "water_sensors.sch" 50
+F2 "i2c_slave_sda" B L 8500 4800 50 
+F3 "i2c_slave_scl" I L 8500 4900 50 
+F4 "sonar_clk" I L 8500 5950 50 
+F5 "sonar_io1" I L 8500 6050 50 
+F6 "sonar_out3" O L 8500 6250 50 
+F7 "sonar_out4" O L 8500 6350 50 
+F8 "sonar_ncs" I L 8500 5450 50 
+F9 "sonar_sdo" O L 8500 5550 50 
+F10 "sonar_sdi" I L 8500 5650 50 
+F11 "sonar_sclk" I L 8500 5750 50 
+F12 "sonar_vout" O L 8500 6150 50 
+F13 "sonar_sel" I L 8500 6450 50 
+F14 "sonar_pwr" I L 8500 6550 50 
+F15 "lidar_pwr" I L 8500 5050 50 
+F16 "lidar_tx" I L 8500 5150 50 
+F17 "lidar_rx" O L 8500 5250 50 
+$EndSheet
+Wire Wire Line
+	8000 4900 8500 4900
+Wire Wire Line
+	8500 4800 8000 4800
+$Sheet
+S 3600 700  3750 6350
+U 6147DBE4
+F0 "micro" 50
+F1 "micro.sch" 50
+F2 "lights" O L 3600 1650 50 
+F3 "servo[3..0]" O L 3600 1800 50 
+F4 "bldc[7..0]" O L 3600 1950 50 
+F5 "alcc0" I L 3600 3000 50 
+F6 "scl1" O L 3600 3900 50 
+F7 "sda1" B L 3600 4000 50 
+F8 "alcc1" I L 3600 4100 50 
+F9 "water" I L 3600 5250 50 
+F10 "spi_ncs" O R 7350 5450 50 
+F11 "spi_miso" I R 7350 5550 50 
+F12 "spi_mosi" O R 7350 5650 50 
+F13 "spi_sclk" O R 7350 5750 50 
+F14 "rxd" I R 7350 2600 50 
+F15 "txd" O R 7350 2500 50 
+F16 "temp[3..0]" I L 3600 5100 50 
+F17 "ro" I L 3600 6300 50 
+F18 "de" O L 3600 6450 50 
+F19 "di" O L 3600 6600 50 
+F20 "nRst" O R 7350 1850 50 
+F21 "eth_tx_en" O R 7350 1050 50 
+F22 "eth_tx_d[1..0]" O R 7350 1150 50 
+F23 "eth_rx_d[1..0]" I R 7350 1250 50 
+F24 "eth_crs_dv" I R 7350 1350 50 
+F25 "eth_ref_clk" I R 7350 1450 50 
+F26 "eth_mdio" B R 7350 1550 50 
+F27 "eth_mdc" O R 7350 1650 50 
+F28 "eth_pwdn_int" B R 7350 1750 50 
+F29 "sonar_ana_in" I R 7350 6150 50 
+F30 "sonar_clk" O R 7350 5950 50 
+F31 "sonar_out3" I R 7350 6250 50 
+F32 "sonar_out4" I R 7350 6350 50 
+F33 "sonar_io1" O R 7350 6050 50 
+F34 "sonar_sel" O R 7350 6450 50 
+F35 "sonar_pwr" O R 7350 6550 50 
+F36 "scl3" O L 3600 2800 50 
+F37 "sda3" B L 3600 2900 50 
+F38 "lidar_tx" O R 7350 5050 50 
+F39 "lidar_rx" I R 7350 5250 50 
+F40 "lidar_pwr" O R 7350 5150 50 
+$EndSheet
+Text Label 8000 4900 0    50   ~ 0
+scl1
+Text Label 8000 4800 0    50   ~ 0
+sda1
+Wire Wire Line
+	7350 5050 8500 5050
+Wire Wire Line
+	8500 5150 7350 5150
+Wire Wire Line
+	7350 5250 8500 5250
+$Sheet
+S 8500 4200 1000 250 
+U 621D983E
+F0 "RaspberryPi" 50
+F1 "RaspberryPi.sch" 50
+F2 "txd" O L 8500 4400 50 
+F3 "rxd" I L 8500 4300 50 
+$EndSheet
+Wire Wire Line
+	8500 4300 7850 4300
+Wire Wire Line
+	7850 4300 7850 3800
+Connection ~ 7850 3800
+Wire Wire Line
+	8500 4400 7750 4400
+Wire Wire Line
+	7750 4400 7750 3900
+Connection ~ 7750 3900
 $EndSCHEMATC
