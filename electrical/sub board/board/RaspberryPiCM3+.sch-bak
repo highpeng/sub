@@ -701,7 +701,7 @@ P 3050 4200
 F 0 "U801" H 3300 950 50  0000 C CNN
 F 1 "RaspberryPi-CM3+L" H 3650 850 50  0000 C CNN
 F 2 "Connector:Conn_TE-DDR2-SODIMM-0.6-200P-doublesided" H 2450 7600 50  0001 C CNN
-F 3 "https://www.raspberrypi.org/documentation/hardware/computemodule/datasheets/rpi_DATA_CM3plus_1p0.pdf" H 2450 7600 50  0001 C CNN
+F 3 "A111047CT-ND" H 2450 7600 50  0001 C CNN
 	1    3050 4200
 	1    0    0    -1  
 $EndComp

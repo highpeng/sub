@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name sub_board)(type Legacy)(uri ${KIPRJMOD}/sub_board.lib)(options "")(descr ""))
+  (lib (name holo)(type Legacy)(uri D:/projects/holo/board/holo.lib)(options "")(descr ""))
+  (lib (name CM4)(type Legacy)(uri "D:/projects/sub/electrical/base board/Raspberry_Pi_Compute_Module_4.lib")(options "")(descr ""))
+)

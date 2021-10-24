@@ -99,4 +99,6 @@ Text HLabel 3850 2800 0    50   Output ~ 0
 txd
 Text HLabel 3850 2900 0    50   Input ~ 0
 rxd
+Text Notes 7050 2950 0    50   ~ 10
+Check PI orientation
 $EndSCHEMATC
